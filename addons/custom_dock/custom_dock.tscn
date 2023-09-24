@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf7p85u06301d"]
+
+[ext_resource type="Theme" uid="uid://q6ipshkdr0ht" path="res://assets/open_world/open_world_theme.tres" id="1_5fvyt"]
+
+[node name="Custom Dock" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment_vertical = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="AspectRatioContainer"]
+layout_mode = 2
+
+[node name="DockPanel" type="Panel" parent="AspectRatioContainer/CenterContainer"]
+custom_minimum_size = Vector2(221.54, 253.75)
+layout_mode = 2
+theme = ExtResource("1_5fvyt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/CenterContainer"]
+custom_minimum_size = Vector2(197.465, 0)
+layout_mode = 2
+
+[node name="DockLabel" type="Label" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_5fvyt")
+text = "[ DOCK TITLE ]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VarBox1Label" type="Label" parent="AspectRatioContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_5fvyt")
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 15
+text = "var_box_1 :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VarBox1" type="SpinBox" parent="AspectRatioContainer/CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+step = 2.0
+alignment = 1
+select_all_on_focus = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VarBox2Label" type="Label" parent="AspectRatioContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_5fvyt")
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 15
+text = "var_box_2 :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VarBox2" type="SpinBox" parent="AspectRatioContainer/CenterContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 10
+step = 2.0
+alignment = 1
+select_all_on_focus = true
+
+[node name="Button1" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme = ExtResource("1_5fvyt")
+text = "BUTTON 1"
+
+[node name="Button2" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme = ExtResource("1_5fvyt")
+text = "BUTTON 2"
